@@ -1,0 +1,31 @@
+[general]
+import = [ "~/.config/alacritty/catppuccin-mocha.toml" ]
+
+
+
+[env]
+TERM = "xterm-256color"
+
+#opties
+#Hack
+#IosevkaTerm
+
+[font]
+normal.family = "IosevkaTerm"
+normal.style = "Regular"
+
+bold.family = "IosevkaTerm"
+bold.style = "Bold"
+
+italic.family = "IosevkaTerm"
+italic.style = "Italic"
+
+bold_italic.family = "IosevkaTerm"
+bold_italic.style = "Bold Italic"
+
+[window]
+opacity = 0.9 
+
+padding = { x = 15 , y = 15 }
+
+decorations = "Full"
