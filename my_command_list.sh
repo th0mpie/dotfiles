@@ -4,13 +4,15 @@
 show_menu_main() {
     while true; do
         clear
+	echo "========================="
         echo "My Command List"
 	echo "========================="
         echo "1) System"
         echo "2) Configuration"
-        echo "3) Fun Stuff"
+	echo "3) Fun Stuff"
+	echo "-------------------------"
         echo "0) Exit"
-        echo "========================="
+        echo "-------------------------"
 
         read -p "Enter the number of the command to run: " choice
 
@@ -28,6 +30,7 @@ show_menu_main() {
 show_menu_system() {
     while true; do
         clear
+	echo "========================="
         echo "System Commands"
 	echo "========================="
         echo "1) Update & Upgrade System"
@@ -35,8 +38,9 @@ show_menu_system() {
         echo "3) List Active Processes"
         echo "4) Show Disk Usage"
         echo "5) Show Memory Usage"
+	echo "-------------------------"
         echo "0) Back"
-	echo "========================="
+	echo "-------------------------"
 
         read -p "Enter the number of the command to run: " choice
 
@@ -65,6 +69,7 @@ show_menu_system() {
 show_menu_configuration() {
     while true; do
         clear
+	echo "========================="
         echo "Configuration"
 	echo "========================="
         echo "1) i3"
@@ -72,8 +77,9 @@ show_menu_configuration() {
         echo "3) .bashrc"
         echo "4) vim"
         echo "5) Edit Command List"
+	echo "-------------------------"
         echo "0) Back"
-        echo "========================="
+        echo "-------------------------"
 
         read -p "Enter the number of the command to run: " choice
 
@@ -93,18 +99,24 @@ show_menu_configuration() {
 show_menu_funstuff() {
     while true; do
         clear
+	echo "========================="
         echo "Fun Stuff"
 	echo "========================="
         echo "1) art"
         echo "2) cava"
-        echo "0) Back"
-        echo "========================="
+	echo "3) Rock Paper Scissors"
+        echo "4) Heads or Tails"
+	echo "-------------------------"
+	echo "0) Back"
+        echo "-------------------------"
 
         read -p "Enter the number of the command to run: " choice
 
         case $choice in
-            1) echo "command empty" ;;
+            1) echo "8==D"; read -p "Press Enter to return to the menu..." ;;
             2) cava ;;
+	    3) ~/scripts/terminal_games/rock_paper_scissors.py ;;
+	    4) ~/scripts/terminal_games/heads_or_tails.py ;;
             0) break ;;
             *) echo "Invalid choice."; read -p "Press Enter to return to the menu..." ;;
         esac
