@@ -4,7 +4,8 @@
 show_menu_main() {
     while true; do
         clear
-        echo "==== My Command List ===="
+        echo "My Command List"
+	echo "========================="
         echo "1) System"
         echo "2) Configuration"
         echo "3) Fun Stuff"
@@ -27,7 +28,8 @@ show_menu_main() {
 show_menu_system() {
     while true; do
         clear
-        echo "==== System Commands ===="
+        echo "System Commands"
+	echo "========================="
         echo "1) Update & Upgrade System"
         echo "2) Clean Package Cache"
         echo "3) List Active Processes"
@@ -63,7 +65,8 @@ show_menu_system() {
 show_menu_configuration() {
     while true; do
         clear
-        echo " Configuration Commands "
+        echo "Configuration"
+	echo "========================="
         echo "1) i3"
         echo "2) Alacritty"
         echo "3) .bashrc"
@@ -90,7 +93,8 @@ show_menu_configuration() {
 show_menu_funstuff() {
     while true; do
         clear
-        echo "======= Fun Stuff ======="
+        echo "Fun Stuff"
+	echo "========================="
         echo "1) art"
         echo "2) cava"
         echo "0) Back"
