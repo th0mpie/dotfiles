@@ -40,7 +40,14 @@ END
 
 
 ###### code ######
+import random
+import os
 
-
+print("number_guessing_game")
+print("--------------------")
+print("1) 1-10")
+print("2) 1-50")
+print("3) 1-100")
+range_input = input("Choose a number range")
 
 
