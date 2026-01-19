@@ -16,18 +16,20 @@ while True:
     range_input = input("Choose a number range")
     if range_input == "1":
         max_number = 10
+        break
     elif range_input == "2":
         max_number = 50
+        break
     elif range_input == "3":
         max_number = 100
-    break
+        break
     else:
         print("Invalid input. Please try again.")
 
 os.system('clear')
 
 # generate random number between 1 and max_number
-secret_number = random(1, max_number)
+secret_number = random.randint(1, max_number)
 attempts = 0
 
 # game loop
@@ -35,18 +37,19 @@ while True:
     guess = input("Guess the number | q to quit")
     if guess == "q":
         break
-    elif guess == secret_number
+    elif guess == secret_number:
+        attempts += 1
         print("Congratulations)
-        print("attempts = {attempts})
+        print(f"attempts = {attempts})
         input("press enter to continue")
         break
     elif guess < secret_number:
         attempts += 1
-        print("attempts = {attempts})
+        print(f"attempts = {attempts})
         print("Higher")
     elif guess > secret_number:
         attempts += 1
-        print("attempts = {attempts})
-        print("Lower")    
-    else:
+        print(f"attempts = {attempts})
+        print("Lower")
+
         
