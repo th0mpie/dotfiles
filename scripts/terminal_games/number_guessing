@@ -35,21 +35,22 @@ attempts = 0
 # game loop
 while True:
     guess = input("Guess the number | q to quit")
+    guess_int = int(guess)
     if guess == "q":
         break
-    elif guess == secret_number:
+    elif guess_int == secret_number:
         attempts += 1
-        print("Congratulations)
-        print(f"attempts = {attempts})
+        print("Congratulations")
+        print(f"attempts = {attempts}")
         input("press enter to continue")
         break
-    elif guess < secret_number:
+    elif guess_int < secret_number:
         attempts += 1
-        print(f"attempts = {attempts})
+        print(f"attempts = {attempts}")
         print("Higher")
-    elif guess > secret_number:
+    elif guess_int > secret_number:
         attempts += 1
-        print(f"attempts = {attempts})
+        print(f"attempts = {attempts}")
         print("Lower")
-
-        
+    else:
+        input("error. press enter to continue")
