@@ -1,0 +1,46 @@
+START
+
+print greeting
+
+print:
+- choose number range
+- 1) 1–10
+- 2) 1–50
+- 3) 1–100
+-> player input (validate)
+
+clear screen
+
+generate random number in chosen range
+
+LOOP:
+    print "Guess the number (or type 'q' to quit):"
+    -> player input
+
+    if input == 'q':
+        exit loop
+
+    if not a number:
+        print "Invalid input"
+        continue
+
+    compare guess with secret number
+
+    if correct:
+        print "Congratulations!"
+        break
+
+    if too low:
+        print "Higher"
+
+    if too high:
+        print "Lower"
+
+END
+
+
+###### code ######
+
+
+
+
