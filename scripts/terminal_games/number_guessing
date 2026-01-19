@@ -50,6 +50,12 @@ print("--------------------")
 print("1) 1-10")
 print("2) 1-50")
 print("3) 1-100")
-range_input = input("Choose a number range")
+
+while True:
+    range_input = input("Choose a number range")
+    if range_input = :
+        break
+    else: print("invalid option")
+
 
 
