@@ -37,6 +37,11 @@ while True
     guess = input("Guess the number | q to quit")
     if guess == "q":
         break
+    try:
+        guess_int = int(guess)  # probeer converteren
+    except ValueError:
+        print("Invalid input, please enter a number or 'q' to quit")
+        continue  # terug naar het begin van de loop
     guess_int = int(guess)
     elif guess_int == secret_number:
         attempts += 1
@@ -52,5 +57,3 @@ while True
         attempts += 1
         print(f"attempts = {attempts}")
         print("Lower")
-    else:
-        input("error. press enter to continue")
