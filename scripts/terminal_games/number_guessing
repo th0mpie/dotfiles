@@ -52,7 +52,7 @@ while True:
         attempts += 1
         print(f"attempts = {attempts}")
         print("Higher")
-    else guess_int > secret_number:
+    else:
         attempts += 1
         print(f"attempts = {attempts}")
         print("Lower")
