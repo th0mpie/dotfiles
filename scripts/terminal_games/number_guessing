@@ -1,61 +1,34 @@
-START
-
-print greeting
-
-print:
-- choose number range
-- 1) 1–10
-- 2) 1–50
-- 3) 1–100
--> player input (validate)
-
-clear screen
-
-generate random number in chosen range
-
-LOOP:
-    print "Guess the number (or type 'q' to quit):"
-    -> player input
-
-    if input == 'q':
-        exit loop
-
-    if not a number:
-        print "Invalid input"
-        continue
-
-    compare guess with secret number
-
-    if correct:
-        print "Congratulations!"
-        break
-
-    if too low:
-        print "Higher"
-
-    if too high:
-        print "Lower"
-
-END
-
-
-###### code ######
 #!/usr/bin/env python3
 
+# import stuff
 import random
 import os
 
+# greeting + selecting range
 print("number_guessing_game")
 print("--------------------")
 print("1) 1-10")
 print("2) 1-50")
 print("3) 1-100")
 
+# validating input
 while True:
     range_input = input("Choose a number range")
-    if range_input = :
+    if range_input in ["1","2", "3"]:
+        range = [int(range_user) -1]
         break
-    else: print("invalid option")
+    else: print("Invalid input. Please try again.")
+os.system('clear')
 
+# generate random number in chosen range
+computer = random.choise(range)
 
-
+# game loop
+while True:
+    guess = input("Guess the number | q to quit"
+    if guess == q:
+        break
+    else: 
+        compare
+        print
+        
