@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+
+# import stuff
+import random
+import os
+
+# greeting + selecting range
+print("number_guessing_game")
+print("--------------------")
+print("1) 1-10")
+print("2) 1-50")
+print("3) 1-100")
+
+# validating input
+while True:
+    range_input = input("Choose a number range")
+    if range_input == "1":
+        max_number = 10
+        break
+    elif range_input == "2":
+        max_number = 50
+        break
+    elif range_input == "3":
+        max_number = 100
+        break
+    else:
+        print("Invalid input. Please try again.")
+
+os.system('clear')
+
+# generate random number between 1 and max_number
+secret_number = random.randint(1, max_number)
+attempts = 0
+
+# game loop
+while True:
+    guess = input("Guess the number | q to quit")
+    if guess == "q":
+        break
+    try:
+        guess_int = int(guess)  # probeer converteren
+    except ValueError:
+        print("Invalid input, please enter a number or 'q' to quit")
+        continue  # terug naar het begin van de loop
+    if guess_int == secret_number:
+        attempts += 1
+        print("Congratulations")
+        print(f"attempts = {attempts}")
+        input("press enter to continue")
+        break
+    elif guess_int < secret_number:
+        attempts += 1
+        print(f"attempts = {attempts}")
+        print("Higher")
+    else:
+        attempts += 1
+        print(f"attempts = {attempts}")
+        print("Lower")
